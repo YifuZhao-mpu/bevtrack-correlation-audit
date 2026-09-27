@@ -1,0 +1,169 @@
+FINAL NUMBERS -- generated from the frozen eval JSONs, not from memory
+========================================================================
+
+[1] TRAINING-NOISE FLOOR: implicit baseline arm, independent runs, identical
+    config / seed / code / environment / evaluator.
+  KITTI Car  (3 runs)
+    all      69.54  71.08  68.72   sd  1.20
+    static   71.79  73.73  71.47   sd  1.22
+    moving   66.56  67.58  65.07   sd  1.26
+  nuScenes   (5 runs)
+    all      59.83  60.76  59.59  61.50  56.27   sd  2.00
+    static   69.17  69.45  70.24  70.16  67.92   sd  0.94
+    moving   24.90  28.25  19.78  29.10  12.74   sd  6.78
+
+[2] PER-ARM sd (all stratum) -- the noise floor is arm-dependent.
+  KITTI  : base 1.20   forced 2.17   gated 0.43   evid 0.35
+  nuScenes: base 2.00   forced 1.40   gated 2.90   evid 3.03
+
+[3] SAME-CONFIG REPLICATE PAIRS (KITTI m_ vs fix_, identical configs).
+    seed 0:  +2.13  +3.32  +0.55
+    seed 1:  +1.73  +2.91  +0.16
+    seed 2:  -1.52  -2.16  -0.68
+
+[4] EVIDENCE-PATHWAY COUNTERFACTUAL (same weights; reliance = shuffled-normal)
+    KITTI    s0: gain  -0.12   reliance   +0.54
+    KITTI    s1: gain  -2.34   reliance   -7.89
+    KITTI    s2: gain  +0.29   reliance  -15.81
+    nuScenes s0: gain  +3.62   reliance   -4.19
+    nuScenes s1: gain  +1.35   reliance   -3.76
+    nuScenes s2: gain  -3.96   reliance   -2.81
+    nuScenes s3: gain  -0.08   reliance   -4.25
+    nuScenes s4: gain  -0.03   reliance   -2.47
+    n=8  mean gain -0.16  mean reliance -5.08  corr(reliance,gain) = -0.018
+
+
+[5] MAIN TABLES: mean +- sd over seeds, Success / Precision
+
+  KITTI Car (3 seeds)
+    arm                         all                 static                 moving
+    base          69.78+-1.20/82.92      72.33+-1.22/85.15      66.40+-1.26/79.96
+    forced        67.79+-2.17/79.90      71.34+-2.84/82.88      63.09+-1.32/75.96
+    gated         66.37+-0.43/78.12      69.97+-0.49/81.35      61.61+-0.46/73.84
+    evid          69.05+-0.35/81.42      71.73+-0.45/83.56      65.52+-1.39/78.57
+
+  nuScenes Car (5 seeds)
+    arm                         all                 static                 moving
+    base          59.59+-2.00/66.01      69.39+-0.94/77.66      22.95+-6.78/22.43
+    forced        58.36+-1.40/64.73      67.17+-2.06/75.20      25.43+-1.89/25.60
+    gated         56.37+-2.90/61.43      65.32+-2.77/71.77      22.93+-3.62/22.76
+    evid          59.81+-3.03/65.85      68.99+-2.75/76.71      25.49+-5.11/25.27
+
+
+[6] CALIBRATED CONTRASTS (two-level seed x cluster bootstrap)
+
+    Regenerated 2026-09-26 from intervals_final.txt at the draw counts the
+    paper states (KITTI 40000, nuScenes 20000, seed 0, so the endpoints are
+    exactly reproducible). The previous copy of this section was written
+    before tools/seed_scene_ci.py was corrected on 2026-09-23 and carried
+    verdicts from the two-level interval alone, which labels five rows
+    RESOLVED that the paper's three-part rule does not. The paper always
+    applied the full rule, so its verdicts were and are unaffected.
+
+  KITTI forced - base (3 seeds, tracklet clusters)
+    all     d=-1.99  per-seed ['+0.02', '-5.71', '-0.27']
+            seed+tracklet [-6.80,+1.97] (width 8.77)   -> NOT RESOLVED
+            seed t-int  [-10.01,+6.03]
+    static  d=-0.99  per-seed ['+1.69', '-5.61', '+0.96']
+            seed+tracklet [-7.13,+3.44] (width 10.57)   -> NOT RESOLVED
+            seed t-int  [-10.98,+9.00]
+    moving  d=-3.31  per-seed ['-2.19', '-5.84', '-1.90']
+            seed+tracklet [-7.69,+0.55] (width 8.24)   -> NOT RESOLVED
+            seed t-int  [-8.77,+2.15]
+
+  KITTI gated - base (3 seeds, tracklet clusters)
+    all     d=-3.40  per-seed ['-3.61', '-4.29', '-2.31']
+            seed+tracklet [-7.47,-0.72] (width 6.75)   -> RESOLVED
+            seed t-int  [-5.91,-0.90]
+    static  d=-2.36  per-seed ['-2.38', '-3.42', '-1.27']
+            seed+tracklet [-6.99,+0.23] (width 7.22)   -> NOT RESOLVED
+            seed t-int  [-5.03,+0.31]
+    moving  d=-4.79  per-seed ['-5.25', '-5.44', '-3.68']
+            seed+tracklet [-9.22,-1.43] (width 7.80)   -> RESOLVED
+            seed t-int  [-7.19,-2.39]
+
+  KITTI evid - base (3 seeds, tracklet clusters)
+    all     d=-0.72  per-seed ['-0.12', '-2.36', '+0.31']
+            seed+tracklet [-3.97,+0.81] (width 4.78)   -> NOT RESOLVED
+            seed t-int  [-4.28,+2.83]
+    static  d=-0.60  per-seed ['-0.55', '-1.61', '+0.36']
+            seed+tracklet [-3.91,+1.39] (width 5.30)   -> NOT RESOLVED
+            seed t-int  [-3.05,+1.85]
+    moving  d=-0.88  per-seed ['+0.44', '-3.34', '+0.25']
+            seed+tracklet [-4.47,+0.88] (width 5.35)   -> NOT RESOLVED
+            seed t-int  [-6.18,+4.41]
+
+  nuScenes forced - base (5 seeds, scene clusters)
+    all     d=-1.23  per-seed ['-3.15', '-1.66', '-1.03', '-4.19', '+3.91']
+            seed+scene [-3.42,+1.50] (width 4.92)   -> NOT RESOLVED
+            seed t-int  [-5.11,+2.66]
+    static  d=-2.21  per-seed ['-4.17', '-0.77', '-2.55', '-5.11', '+1.54']
+            seed+scene [-4.30,-0.03] (width 4.27)   -> NOT RESOLVED
+            seed t-int  [-5.53,+1.10]
+    moving  d=+2.47  per-seed ['+0.64', '-4.98', '+4.64', '-0.74', '+12.79']
+            seed+scene [-2.43,+8.12] (width 10.54)   -> NOT RESOLVED
+            seed t-int  [-5.86,+10.80]
+
+  nuScenes gated - base (5 seeds, scene clusters)
+    all     d=-3.22  per-seed ['-4.30', '-1.56', '-2.49', '-9.69', '+1.96']
+            seed+scene [-6.76,-0.05] (width 6.71)   -> NOT RESOLVED
+            seed t-int  [-8.53,+2.09]
+    static  d=-4.07  per-seed ['-4.50', '-1.87', '-4.24', '-9.32', '-0.42']
+            seed+scene [-6.92,-1.60] (width 5.32)   -> NOT RESOLVED
+            seed t-int  [-8.28,+0.13]
+    moving  d=-0.02  per-seed ['-3.56', '-0.37', '+4.05', '-11.10', '+10.86']
+            seed+scene [-6.41,+6.36] (width 12.77)   -> NOT RESOLVED
+            seed t-int  [-10.23,+10.18]
+
+  nuScenes evid - base (5 seeds, scene clusters)
+    all     d=+0.22  per-seed ['+3.10', '+1.12', '-4.15', '-0.78', '+1.83']
+            seed+scene [-2.17,+2.26] (width 4.43)   -> NOT RESOLVED
+            seed t-int  [-3.28,+3.72]
+    static  d=-0.40  per-seed ['+2.42', '+2.00', '-4.49', '-0.44', '-1.47']
+            seed+scene [-2.74,+1.71] (width 4.45)   -> NOT RESOLVED
+            seed t-int  [-3.88,+3.09]
+    moving  d=+2.54  per-seed ['+5.63', '-2.17', '-2.90', '-2.08', '+14.20']
+            seed+scene [-2.57,+8.89] (width 11.47)   -> NOT RESOLVED
+            seed t-int  [-6.64,+11.72]
+
+    The appendix four-category sweep and the restored-encoder contrast are in
+    intervals_final.txt under the APP and OFFICIAL headings.
+
+========================================================================
+[7] CORRECTED CORRELATION DIAGNOSTIC  (added 2026-09-23)
+    The superseded diagnostic decoded on linspace(-4.8,4.8,16): zero lag at
+    (+0.32,+0.32) m, spacing 9.6/15 = 0.64 m. True stride is 0.075*2^3 = 0.60 m.
+    It also ran on car_corr2 -- a pre-fix v2 model -- at a Precision-selected
+    checkpoint. Reruns below use decode_corr_heat and terminal checkpoints.
+
+  (a) SAME model + checkpoint (car_corr2), decode changed:
+      static  softargmax_err                      0.457 ->    0.132
+      static  argmax_err                          0.489 ->    0.240
+      static  softargmax_worse_than_zero_pct     87.653 ->   22.992
+      static  recall_top1_1cell                  78.427 ->   98.666
+      inband  softargmax_err                      0.436 ->    0.140
+      inband  argmax_err                          0.498 ->    0.217
+      inband  softargmax_worse_than_zero_pct      4.893 ->    1.124
+      inband  recall_top1_1cell                  87.749 ->   96.992
+
+  (b) matched arms, corrected decode, terminal ckpt, 3 seeds (mean +- sd):
+      arm          static err     moving err   mov top1<1cell  static worse-0
+      forced      0.137±0.005    0.140±0.002     97.173±0.109    23.730±0.744
+      gated       0.142±0.003    0.148±0.002     96.895±0.291    23.862±0.421
+      evid        0.843±0.180    1.046±0.508    22.424±28.075    88.977±6.048
+
+      static mean GT displacement 0.241 m; stride 0.60 m
+      FFT occupancy oracle, moving top-1 within one cell: 71.9%
+
+[8] RESTORED OFFICIAL SPARSE ENCODER (KITTI Car, 3 seeds) -- absent from the draft
+      base    70.20  71.29  69.45  mean  70.31  sd  0.93
+      gated   71.33  71.45  72.37  mean  71.72  sd  0.57
+      gated-base  official :  +1.13  +0.16  +2.92  mean  +1.41
+      gated-base  surrogate:  -3.61  -4.29  -2.31  mean  -3.40
+
+[9] CORRECTED DERIVED QUANTITIES (claim-audit findings)
+      nuScenes evid-base all = +0.2226;  evid arm sd = 3.0336;  ratio = 0.0734
+      nuScenes moving evid-base   = +2.538   (larger positive than +0.22)
+      nuScenes moving forced-base = +2.472
+      static mean |d| (m_base_s0) = 0.2329  -> rounds to 0.23
+      seeds needed for a 2-pt effect at sigma=6.78: normal 44.2

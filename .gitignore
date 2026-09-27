@@ -1,0 +1,28 @@
+# --- training artefacts (384 GB; regenerable from configs + seeds) ---
+work_dir/
+ckpts/
+*.pth
+
+# --- raw training logs (81 MB); the distilled results in test_evals/ are tracked ---
+*.log
+!run_*.sh
+
+# --- bulky intermediates ---
+*.npz
+__pycache__/
+*.pyc
+
+# --- vendor archives ---
+LetPub_journal_template_*.tar.gz
+
+# --- LaTeX build intermediates (main.pdf and main.bbl ARE tracked: the .bbl is
+#     required by Elsevier's submission system, the PDF is the reviewed artefact) ---
+*.aux
+*.fls
+*.fdb_latexmk
+*.blg
+*.spl
+*.out
+*.toc
+*.synctex.gz
+*.log.*

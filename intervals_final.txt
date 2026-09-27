@@ -1,0 +1,248 @@
+### KITTI forced (40000 draws)
+  all     d=-1.99  per-seed ['+0.02', '-5.71', '-0.27']
+          tracklet-only  [-4.65,-0.11] (width 4.55)   <- conditions on these trained models
+          seed+tracklet [-6.80,+1.97] (width 8.77)   -> NOT RESOLVED
+          seed t-int  [-10.01,+6.03]
+  static  d=-0.99  per-seed ['+1.69', '-5.61', '+0.96']
+          tracklet-only  [-3.67,+0.64] (width 4.31)   <- conditions on these trained models
+          seed+tracklet [-7.13,+3.44] (width 10.57)   -> NOT RESOLVED
+          seed t-int  [-10.98,+9.00]
+  moving  d=-3.31  per-seed ['-2.19', '-5.84', '-1.90']
+          tracklet-only  [-6.85,-0.79] (width 6.05)   <- conditions on these trained models
+          seed+tracklet [-7.69,+0.55] (width 8.24)   -> NOT RESOLVED
+          seed t-int  [-8.77,+2.15]
+### KITTI gated (40000 draws)
+  all     d=-3.40  per-seed ['-3.61', '-4.29', '-2.31']
+          tracklet-only  [-6.87,-0.84] (width 6.04)   <- conditions on these trained models
+          seed+tracklet [-7.47,-0.72] (width 6.75)   -> RESOLVED
+          seed t-int  [-5.91,-0.90]
+  static  d=-2.36  per-seed ['-2.38', '-3.42', '-1.27']
+          tracklet-only  [-6.24,+0.02] (width 6.26)   <- conditions on these trained models
+          seed+tracklet [-6.99,+0.23] (width 7.22)   -> NOT RESOLVED
+          seed t-int  [-5.03,+0.31]
+  moving  d=-4.79  per-seed ['-5.25', '-5.44', '-3.68']
+          tracklet-only  [-8.85,-1.59] (width 7.26)   <- conditions on these trained models
+          seed+tracklet [-9.22,-1.43] (width 7.80)   -> RESOLVED
+          seed t-int  [-7.19,-2.39]
+### KITTI evid (40000 draws)
+  all     d=-0.72  per-seed ['-0.12', '-2.36', '+0.31']
+          tracklet-only  [-2.48,+0.67] (width 3.15)   <- conditions on these trained models
+          seed+tracklet [-3.97,+0.81] (width 4.78)   -> NOT RESOLVED
+          seed t-int  [-4.28,+2.83]
+  static  d=-0.60  per-seed ['-0.55', '-1.61', '+0.36']
+          tracklet-only  [-2.73,+1.04] (width 3.77)   <- conditions on these trained models
+          seed+tracklet [-3.91,+1.39] (width 5.30)   -> NOT RESOLVED
+          seed t-int  [-3.05,+1.85]
+  moving  d=-0.88  per-seed ['+0.44', '-3.34', '+0.25']
+          tracklet-only  [-2.54,+0.48] (width 3.02)   <- conditions on these trained models
+          seed+tracklet [-4.47,+0.88] (width 5.35)   -> NOT RESOLVED
+          seed t-int  [-6.18,+4.41]
+### nuScenes forced (20000 draws)
+  all     d=-1.23  per-seed ['-3.15', '-1.66', '-1.03', '-4.19', '+3.91']
+          scene-only  [-1.69,-0.79] (width 0.90)   <- conditions on these trained models
+          seed+scene [-3.42,+1.50] (width 4.92)   -> NOT RESOLVED
+          seed t-int  [-5.11,+2.66]
+  static  d=-2.21  per-seed ['-4.17', '-0.77', '-2.55', '-5.11', '+1.54']
+          scene-only  [-2.72,-1.75] (width 0.97)   <- conditions on these trained models
+          seed+scene [-4.30,-0.03] (width 4.27)   -> NOT RESOLVED
+          seed t-int  [-5.53,+1.10]
+  moving  d=+2.47  per-seed ['+0.64', '-4.98', '+4.64', '-0.74', '+12.79']
+          scene-only  [+1.92,+3.05] (width 1.12)   <- conditions on these trained models
+          seed+scene [-2.43,+8.12] (width 10.54)   -> NOT RESOLVED
+          seed t-int  [-5.86,+10.80]
+### nuScenes gated (20000 draws)
+  all     d=-3.22  per-seed ['-4.30', '-1.56', '-2.49', '-9.69', '+1.96']
+          scene-only  [-3.69,-2.74] (width 0.95)   <- conditions on these trained models
+          seed+scene [-6.76,-0.05] (width 6.71)   -> NOT RESOLVED
+          seed t-int  [-8.53,+2.09]
+  static  d=-4.07  per-seed ['-4.50', '-1.87', '-4.24', '-9.32', '-0.42']
+          scene-only  [-4.58,-3.57] (width 1.01)   <- conditions on these trained models
+          seed+scene [-6.92,-1.60] (width 5.32)   -> NOT RESOLVED
+          seed t-int  [-8.28,+0.13]
+  moving  d=-0.02  per-seed ['-3.56', '-0.37', '+4.05', '-11.10', '+10.86']
+          scene-only  [-0.60,+0.52] (width 1.12)   <- conditions on these trained models
+          seed+scene [-6.41,+6.36] (width 12.77)   -> NOT RESOLVED
+          seed t-int  [-10.23,+10.18]
+### nuScenes evid (20000 draws)
+  all     d=+0.22  per-seed ['+3.10', '+1.12', '-4.15', '-0.78', '+1.83']
+          scene-only  [-0.05,+0.50] (width 0.54)   <- conditions on these trained models
+          seed+scene [-2.17,+2.26] (width 4.43)   -> NOT RESOLVED
+          seed t-int  [-3.28,+3.72]
+  static  d=-0.40  per-seed ['+2.42', '+2.00', '-4.49', '-0.44', '-1.47']
+          scene-only  [-0.70,-0.09] (width 0.60)   <- conditions on these trained models
+          seed+scene [-2.74,+1.71] (width 4.45)   -> NOT RESOLVED
+          seed t-int  [-3.88,+3.09]
+  moving  d=+2.54  per-seed ['+5.63', '-2.17', '-2.90', '-2.08', '+14.20']
+          scene-only  [+2.09,+3.00] (width 0.92)   <- conditions on these trained models
+          seed+scene [-2.57,+8.89] (width 11.47)   -> NOT RESOLVED
+          seed t-int  [-6.64,+11.72]
+### APP car_forced (40000 draws)
+  all     d=-2.74  per-seed ['+0.70', '-3.97', '-4.95']
+          tracklet-only  [-5.51,-0.65] (width 4.85)   <- conditions on these trained models
+          seed+tracklet [-6.99,+1.37] (width 8.36)   -> NOT RESOLVED
+          seed t-int  [-10.24,+4.76]
+  static  d=-1.65  per-seed ['+3.64', '-2.74', '-5.85']
+          tracklet-only  [-5.25,+0.91] (width 6.16)   <- conditions on these trained models
+          seed+tracklet [-8.03,+4.56] (width 12.59)   -> NOT RESOLVED
+          seed t-int  [-13.68,+10.38]
+  moving  d=-4.19  per-seed ['-3.20', '-5.61', '-3.76']
+          tracklet-only  [-6.90,-2.09] (width 4.82)   <- conditions on these trained models
+          seed+tracklet [-7.45,-1.52] (width 5.94)   -> RESOLVED
+          seed t-int  [-7.32,-1.06]
+### APP car_gated (40000 draws)
+  all     d=-2.91  per-seed ['-2.61', '-3.72', '-2.41']
+          tracklet-only  [-6.70,+0.00] (width 6.70)   <- conditions on these trained models
+          seed+tracklet [-7.12,+0.24] (width 7.36)   -> NOT RESOLVED
+          seed t-int  [-4.66,-1.16]
+  static  d=-1.93  per-seed ['-1.02', '-2.59', '-2.19']
+          tracklet-only  [-7.39,+2.24] (width 9.62)   <- conditions on these trained models
+          seed+tracklet [-7.79,+2.86] (width 10.65)   -> NOT RESOLVED
+          seed t-int  [-3.96,+0.09]
+  moving  d=-4.20  per-seed ['-4.71', '-5.20', '-2.70']
+          tracklet-only  [-7.06,-1.96] (width 5.11)   <- conditions on these trained models
+          seed+tracklet [-7.75,-1.66] (width 6.09)   -> RESOLVED
+          seed t-int  [-7.50,-0.91]
+### APP car_evid (40000 draws)
+  all     d=+0.73  per-seed ['+1.81', '-0.26', '+0.63']
+          tracklet-only  [-0.74,+2.43] (width 3.17)   <- conditions on these trained models
+          seed+tracklet [-1.44,+3.28] (width 4.72)   -> NOT RESOLVED
+          seed t-int  [-1.86,+3.31]
+  static  d=+1.13  per-seed ['+2.25', '+0.83', '+0.30']
+          tracklet-only  [-0.77,+3.34] (width 4.12)   <- conditions on these trained models
+          seed+tracklet [-1.40,+4.48] (width 5.89)   -> NOT RESOLVED
+          seed t-int  [-1.38,+3.64]
+  moving  d=+0.19  per-seed ['+1.22', '-1.71', '+1.07']
+          tracklet-only  [-1.16,+1.81] (width 2.97)   <- conditions on these trained models
+          seed+tracklet [-2.02,+2.98] (width 4.99)   -> NOT RESOLVED
+          seed t-int  [-3.90,+4.28]
+### APP ped_forced (40000 draws)
+  all     d=+2.39  per-seed ['+1.41', '+6.26', '-0.50']
+          tracklet-only  [-4.31,+11.00] (width 15.32)   <- conditions on these trained models
+          seed+tracklet [-5.56,+11.68] (width 17.24)   -> NOT RESOLVED
+          seed t-int  [-6.26,+11.04]
+  static  d=+2.36  per-seed ['+1.33', '+6.32', '-0.58']
+          tracklet-only  [-4.60,+11.25] (width 15.86)   <- conditions on these trained models
+          seed+tracklet [-5.86,+11.96] (width 17.81)   -> NOT RESOLVED
+          seed t-int  [-6.49,+11.21]
+  moving  d=+3.36  per-seed ['+3.71', '+4.51', '+1.84']
+          tracklet-only  [-1.89,+12.43] (width 14.32)   <- conditions on these trained models
+          seed+tracklet [-2.01,+13.09] (width 15.10)   -> NOT RESOLVED
+          seed t-int  [-0.05,+6.76]
+### APP ped_gated (40000 draws)
+  all     d=+1.21  per-seed ['+1.46', '-0.42', '+2.58']
+          tracklet-only  [-6.07,+10.18] (width 16.24)   <- conditions on these trained models
+          seed+tracklet [-6.74,+10.34] (width 17.08)   -> NOT RESOLVED
+          seed t-int  [-2.55,+4.97]
+  static  d=+1.10  per-seed ['+1.32', '-0.63', '+2.61']
+          tracklet-only  [-6.44,+10.37] (width 16.81)   <- conditions on these trained models
+          seed+tracklet [-7.19,+10.56] (width 17.75)   -> NOT RESOLVED
+          seed t-int  [-2.95,+5.15]
+  moving  d=+4.24  per-seed ['+5.58', '+5.56', '+1.58']
+          tracklet-only  [-0.24,+12.57] (width 12.81)   <- conditions on these trained models
+          seed+tracklet [-0.57,+13.69] (width 14.26)   -> NOT RESOLVED
+          seed t-int  [-1.49,+9.97]
+### APP ped_evid (40000 draws)
+  WARNING: K=2 seeds. The training-variance component cannot be estimated from 2 runs; the two-level interval below is coarse and the t-interval is wide BY CONSTRUCTION. Treat both as lower bounds on the true uncertainty, not as a result.
+  all     d=-3.95  per-seed ['-4.77', '-3.12']
+          tracklet-only  [-11.18,+2.68] (width 13.86)   <- conditions on these trained models
+          seed+tracklet [-11.96,+3.24] (width 15.20)   -> NOT RESOLVED
+          seed t-int  [-14.46,+6.57]
+  static  d=-4.10  per-seed ['-4.96', '-3.23']
+          tracklet-only  [-11.59,+2.76] (width 14.35)   <- conditions on these trained models
+          seed+tracklet [-12.41,+3.33] (width 15.74)   -> NOT RESOLVED
+          seed t-int  [-15.07,+6.88]
+  moving  d=+0.41  per-seed ['+0.61', '+0.22']
+          tracklet-only  [-0.68,+1.38] (width 2.06)   <- conditions on these trained models
+          seed+tracklet [-0.96,+1.68] (width 2.64)   -> NOT RESOLVED
+          seed t-int  [-2.05,+2.88]
+### APP van_forced (40000 draws)
+  all     d=-12.76  per-seed ['-8.96', '-18.63', '-10.69']
+          tracklet-only  [-20.37,-3.14] (width 17.23)   <- conditions on these trained models
+          seed+tracklet [-23.57,-2.62] (width 20.95)   -> NOT RESOLVED
+          seed t-int  [-25.57,+0.05]
+  static  d=-13.42  per-seed ['-8.43', '-17.86', '-13.96']
+          tracklet-only  [-23.53,-0.52] (width 23.02)   <- conditions on these trained models
+          seed+tracklet [-26.62,-0.41] (width 26.22)   -> RESOLVED
+          seed t-int  [-25.19,-1.64]
+  moving  d=-11.81  per-seed ['-9.73', '-19.74', '-5.94']
+          tracklet-only  [-22.79,-1.02] (width 21.77)   <- conditions on these trained models
+          seed+tracklet [-26.75,-0.27] (width 26.48)   -> NOT RESOLVED
+          seed t-int  [-29.52,+5.91]
+### APP van_gated (40000 draws)
+  all     d=-9.76  per-seed ['-9.27', '-9.16', '-10.85']
+          tracklet-only  [-17.60,-1.87] (width 15.73)   <- conditions on these trained models
+          seed+tracklet [-18.42,-0.91] (width 17.51)   -> RESOLVED
+          seed t-int  [-12.12,-7.41]
+  static  d=-10.79  per-seed ['-10.13', '-9.58', '-12.66']
+          tracklet-only  [-21.94,-0.03] (width 21.90)   <- conditions on these trained models
+          seed+tracklet [-23.13,+0.52] (width 23.65)   -> NOT RESOLVED
+          seed t-int  [-14.87,-6.71]
+  moving  d=-8.27  per-seed ['-8.03', '-8.55', '-8.23']
+          tracklet-only  [-14.13,-2.34] (width 11.79)   <- conditions on these trained models
+          seed+tracklet [-15.78,-1.44] (width 14.34)   -> RESOLVED
+          seed t-int  [-8.92,-7.62]
+### APP van_evid (40000 draws)
+  all     d=-2.64  per-seed ['-2.15', '+0.56', '-6.34']
+          tracklet-only  [-5.48,+0.27] (width 5.76)   <- conditions on these trained models
+          seed+tracklet [-8.23,+0.61] (width 8.83)   -> NOT RESOLVED
+          seed t-int  [-11.29,+6.00]
+  static  d=-4.01  per-seed ['-3.94', '+1.52', '-9.62']
+          tracklet-only  [-7.59,+0.46] (width 8.06)   <- conditions on these trained models
+          seed+tracklet [-11.98,+1.36] (width 13.34)   -> NOT RESOLVED
+          seed t-int  [-17.86,+9.83]
+  moving  d=-0.65  per-seed ['+0.45', '-0.83', '-1.58']
+          tracklet-only  [-2.43,+0.26] (width 2.69)   <- conditions on these trained models
+          seed+tracklet [-3.49,+0.77] (width 4.25)   -> NOT RESOLVED
+          seed t-int  [-3.20,+1.90]
+### APP cyc_forced (40000 draws)
+  all     d=+1.43  per-seed ['+1.01', '+0.24', '+3.04']
+          tracklet-only  [-0.86,+3.33] (width 4.19)   <- conditions on these trained models
+          seed+tracklet [-1.34,+3.72] (width 5.07)   -> NOT RESOLVED
+          seed t-int  [-2.16,+5.01]
+  static  d=+1.52  per-seed ['+1.99', '-0.40', '+2.95']
+          tracklet-only  [-2.94,+2.64] (width 5.58)   <- conditions on these trained models
+          seed+tracklet [-3.02,+3.81] (width 6.83)   -> NOT RESOLVED
+          seed t-int  [-2.77,+5.80]
+  moving  d=+1.39  per-seed ['+0.61', '+0.50', '+3.07']
+          tracklet-only  [-0.99,+4.38] (width 5.36)   <- conditions on these trained models
+          seed+tracklet [-1.62,+4.58] (width 6.20)   -> NOT RESOLVED
+          seed t-int  [-2.21,+5.00]
+### APP cyc_gated (40000 draws)
+  all     d=-0.82  per-seed ['-1.56', '-2.45', '+1.56']
+          tracklet-only  [-2.77,+0.79] (width 3.56)   <- conditions on these trained models
+          seed+tracklet [-4.04,+2.11] (width 6.15)   -> NOT RESOLVED
+          seed t-int  [-6.05,+4.41]
+  static  d=-1.21  per-seed ['-0.00', '-6.08', '+2.44']
+          tracklet-only  [-2.55,+0.14] (width 2.68)   <- conditions on these trained models
+          seed+tracklet [-5.97,+2.89] (width 8.86)   -> NOT RESOLVED
+          seed t-int  [-12.12,+9.69]
+  moving  d=-0.66  per-seed ['-2.18', '-1.00', '+1.20']
+          tracklet-only  [-3.16,+1.68] (width 4.84)   <- conditions on these trained models
+          seed+tracklet [-4.15,+2.41] (width 6.56)   -> NOT RESOLVED
+          seed t-int  [-4.93,+3.61]
+### APP cyc_evid (40000 draws)
+  all     d=-0.70  per-seed ['+0.00', '+1.66', '-3.77']
+          tracklet-only  [-1.13,-0.28] (width 0.85)   <- conditions on these trained models
+          seed+tracklet [-3.56,+1.77] (width 5.33)   -> NOT RESOLVED
+          seed t-int  [-7.61,+6.20]
+  static  d=-0.45  per-seed ['+0.34', '+1.93', '-3.64']
+          tracklet-only  [-0.88,-0.08] (width 0.80)   <- conditions on these trained models
+          seed+tracklet [-3.65,+2.06] (width 5.71)   -> NOT RESOLVED
+          seed t-int  [-7.58,+6.67]
+  moving  d=-0.80  per-seed ['-0.14', '+1.55', '-3.82']
+          tracklet-only  [-1.37,-0.23] (width 1.13)   <- conditions on these trained models
+          seed+tracklet [-3.93,+1.83] (width 5.76)   -> NOT RESOLVED
+          seed t-int  [-7.62,+6.01]
+### OFFICIAL gated (40000 draws)
+  all     d=+1.41  per-seed ['+1.13', '+0.16', '+2.92']
+          tracklet-only  [-1.28,+4.70] (width 5.98)   <- conditions on these trained models
+          seed+tracklet [-1.90,+5.31] (width 7.21)   -> NOT RESOLVED
+          seed t-int  [-2.08,+4.89]
+  static  d=+1.96  per-seed ['+1.80', '+0.00', '+4.07']
+          tracklet-only  [-2.01,+7.44] (width 9.45)   <- conditions on these trained models
+          seed+tracklet [-3.03,+8.05] (width 11.08)   -> NOT RESOLVED
+          seed t-int  [-3.11,+7.03]
+  moving  d=+0.67  per-seed ['+0.24', '+0.37', '+1.41']
+          tracklet-only  [-0.85,+2.39] (width 3.24)   <- conditions on these trained models
+          seed+tracklet [-1.13,+3.06] (width 4.18)   -> NOT RESOLVED
+          seed t-int  [-0.92,+2.26]

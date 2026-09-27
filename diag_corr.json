@@ -1,0 +1,33 @@
+{
+  "feature_grid": 16,
+  "cell_m": 0.64,
+  "skipped": 22,
+  "static": {
+    "n": 3523,
+    "mean_gt_disp": 0.24082425140839192,
+    "zero_motion_err": 0.24082425140839192,
+    "argmax_err": 0.489299483139202,
+    "softargmax_err": 0.4570479778799126,
+    "softargmax_worse_than_zero_pct": 87.65256883338064,
+    "recall_top1_1cell": 78.42747658245813,
+    "recall_top5_1cell": 99.37553221686063,
+    "err_lowconf_q": 0.4962797342542354,
+    "err_highconf_q": 0.43365869323458334
+  },
+  "inband": {
+    "n": 2759,
+    "mean_gt_disp": 0.848002928955433,
+    "zero_motion_err": 0.848002928955433,
+    "argmax_err": 0.49770458374276305,
+    "softargmax_err": 0.4360371939961633,
+    "softargmax_worse_than_zero_pct": 4.893077201884741,
+    "recall_top1_1cell": 87.74918448713301,
+    "recall_top5_1cell": 99.27509967379486,
+    "err_lowconf_q": 0.5049904978181716,
+    "err_highconf_q": 0.41612261218858354,
+    "fft_f1_15": 54.05207187385406,
+    "fft_f5_15": 72.46057939127246,
+    "fft_f1_64": 73.67070040337367,
+    "fft_f5_64": 85.55188852218555
+  }
+}
